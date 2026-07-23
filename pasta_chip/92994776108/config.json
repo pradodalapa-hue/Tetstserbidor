@@ -1,4 +1,5 @@
 {
   "servidor": "pradodalapa-hue/Tetstserbidor",
-  "cripto": "AES-JDP"
+  "cripto": "AES-JDP",
+  "validade": 1784789406817
 }
