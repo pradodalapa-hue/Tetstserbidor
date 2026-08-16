@@ -19,5 +19,12 @@
     "status": "ativo",
     "path": "clientes/GOOL/",
     "modelo": "T"
+  },
+  {
+    "id": "3434",
+    "apiKey": "MzQzNDE3ODY5MDI4",
+    "status": "ativo",
+    "path": "clientes/3434/",
+    "modelo": "VH"
   }
 ]
