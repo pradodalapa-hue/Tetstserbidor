@@ -26,5 +26,12 @@
     "status": "ativo",
     "path": "clientes/3434/",
     "modelo": "VH"
+  },
+  {
+    "id": "9090",
+    "apiKey": "OTA5MDE3ODY5MDUy",
+    "status": "ativo",
+    "path": "clientes/9090/",
+    "modelo": "9090_CLIENTE"
   }
 ]
