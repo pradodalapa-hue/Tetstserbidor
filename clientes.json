@@ -12,5 +12,12 @@
     "status": "ativo",
     "path": "clientes/120834/",
     "modelo": "VH"
+  },
+  {
+    "id": "GOOL",
+    "apiKey": "R09PTDE3ODY5MDE5",
+    "status": "ativo",
+    "path": "clientes/GOOL/",
+    "modelo": "T"
   }
 ]
