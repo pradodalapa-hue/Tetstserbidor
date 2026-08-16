@@ -33,5 +33,12 @@
     "status": "ativo",
     "path": "clientes/9090/",
     "modelo": "9090_CLIENTE"
+  },
+  {
+    "id": "7070",
+    "apiKey": "NzA3MDE3ODY5MDYx",
+    "status": "ativo",
+    "path": "clientes/7070/",
+    "modelo": "CLIENTE_7070"
   }
 ]
