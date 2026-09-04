@@ -1,14 +1,3 @@
 {
-    "historico": [
-        {
-            "sender": "92994776102",
-            "val": "Oi",
-            "time": "23:45"
-        },
-        {
-            "sender": "92994776102",
-            "val": "Oi",
-            "time": "23:46"
-        }
-    ]
+  "historico": []
 }
