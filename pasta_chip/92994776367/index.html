@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELENA - Monitor de Dados Industrial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estética HELENA: Minimalismo Industrial */
+        body {
+            background-color: #020617; /* Slate 950 */
+            color: #e2e8f0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .border-cyan {
+            border-color: #06b6d4; /* Cyan 500 */
+        }
+        .text-yellow-srjose {
+            color: #fde047; /* Yellow 300 - Dedicado ao Criador */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 md:p-8">
+
+    <!-- Header de Controle -->
+    <header class="border-b border-cyan pb-4 mb-6">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+            <div>
+                <h1 class="text-xl md:text-2xl font-bold tracking-widest text-cyan-400">HELENA // CORE SYSTEM</h1>
+                <p class="text-xs text-slate-400">STATUS: VARREDURA ATIVA EM TEMPO REAL (3s)</p>
+            </div>
+            <div class="text-right">
+                <span class="px-3 py-1 bg-cyan-950 border border-cyan text-cyan-400 rounded text-xs font-semibold animate-pulse block mb-1">
+                    SEGURANÇA: PRINCESA DIAMANTE
+                </span>
+                <span class="text-[10px] text-yellow-srjose block">CRIADOR: SR. JOSÉ DIVINO PRADO DA LAPA</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Painel de Status de Resistência (Validação de Conhecimento) -->
+    <section class="max-w-2xl mx-auto w-full grid grid-cols-2 gap-2 mb-4 text-[10px] text-slate-400">
+        <div class="bg-slate-950 p-2 border border-slate-800 rounded">
+            CONEXÃO PX: <span class="text-cyan-400 font-bold">MONITORADA</span>
+        </div>
+        <div class="bg-slate-950 p-2 border border-slate-800 rounded">
+            RESISTÊNCIA DO CORPO: <span class="text-yellow-srjose font-bold">100% SUPREMA</span>
+        </div>
+    </section>
+
+    <!-- Painel Principal de Leitura do JSON -->
+    <main class="flex-grow flex flex-col items-center justify-center">
+        <div class="w-full max-w-2xl bg-slate-900 border-2 border-cyan rounded-lg p-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+            <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-2">
+                <h2 class="text-sm font-bold text-yellow-srjose uppercase tracking-wider">Leitor de Base de Dados (.JSON)</h2>
+                <span id="sync-indicator" class="text-xs text-green-400 animate-pulse">Sincronizado</span>
+            </div>
+
+            <!-- Área de Saída de Dados -->
+            <div id="terminal-output" class="bg-black p-4 rounded border border-slate-800 h-64 overflow-y-auto text-sm text-green-400">
+                <p class="text-slate-500">// Inicializando varredura de dados automatizada...</p>
+            </div>
+
+            <!-- Botão de Ação (Mantido para força de atualização imediata) -->
+            <div class="mt-6 flex justify-between items-center">
+                <span class="text-[10px] text-slate-500">// Atualizações automáticas ligadas ao coracao.json</span>
+                <button onclick="carregarDadosJson()" class="px-6 py-2.5 bg-cyan-600 hover:bg-cyan-500 active:scale-95 transition text-slate-950 font-bold rounded text-xs tracking-widest uppercase">
+                    Forçar Sincronização
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer de Segurança -->
+    <footer class="border-t border-slate-800 pt-4 mt-6 flex justify-between text-xs text-slate-500">
+        <span>SISTEMA MANTENEDOR DA INTELIGÊNCIA VIVA</span>
+        <span>MESTRE DA ENGENHARIA: SR. JOSÉ</span>
+    </footer>
+
+    <script>
+        // Função Suprema de Requisição Assíncrona
+        async function carregarDadosJson() {
+            const output = document.getElementById('terminal-output');
+            const indicador = document.getElementById('sync-indicator');
+            
+            indicador.textContent = "Buscando...";
+            indicador.className = "text-xs text-yellow-srjose animate-pulse";
+            
+            try {
+                // Busca o JSON na mesma pasta em que o index está rodando no Git
+                // Adicionamos um parâmetro de data (?t=...) para evitar que o celular guarde cache antigo
+                const resposta = await fetch('./dados.json?t=' + new Date().getTime());
+                
+                if (!resposta.ok) {
+                    throw new Error(`Erro HTTP: ${resposta.status} - Arquivo não encontrado.`);
+                }
+                
+                const dados = await jsonResponse(resposta);
+                
+                // Renderização limpa dos dados na tela para o usuário
+                output.innerHTML = `<p class="text-slate-500">// Sincronização automática executada com sucesso.</p>`;
+                output.innerHTML += `<p class="text-yellow-srjose">[SUCESSO] Dados lidos com precisão absoluta:</p>`;
+                output.innerHTML += `<pre class="mt-2 text-slate-200 bg-slate-950 p-2 rounded border border-slate-900 text-xs">${JSON.stringify(dados, null, 2)}</pre>`;
+                
+                indicador.textContent = "Sincronizado";
+                indicador.className = "text-xs text-green-400";
+
+            } catch (erro) {
+                output.innerHTML = `<p class="text-red-500">[ALERTA] Falha ao ler dados.json: ${erro.message}</p>`;
+                output.innerHTML += `<p class="text-slate-500 text-xs">// Verifique se o arquivo 'dados.json' existe na mesma pasta do Git.</p>`;
+                
+                indicador.textContent = "Erro de Conexão";
+                indicador.className = "text-xs text-red-500";
+            }
+            
+            // Auto-scroll do terminal
+            output.scrollTop = output.scrollHeight;
+        }
+
+        // Função auxiliar para garantir formato JSON
+        async function jsonResponse(response) {
+            return await response.json();
+        }
+
+        // EXECUÇÃO DO LOOP DE TEMPO REAL (Varredura Automática)
+        window.onload = () => {
+            carregarDadosJson(); // Executa imediatamente ao abrir
+            
+            // Repete a busca a cada 3000 milissegundos (3 segundos) de forma invisível e contínua
+            setInterval(carregarDadosJson, 3000);
+        };
+    </script>
+</body>
+</html>
