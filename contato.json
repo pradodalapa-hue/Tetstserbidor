@@ -10,5 +10,11 @@
         "status": "ONLINE",
         "endereco": "JDP-CHIP-92994776102",
         "last_active": "2026-09-04T03:50:45.761Z"
+    },
+    "92994776105": {
+        "nome": "CHIP_92994776105",
+        "status": "ONLINE",
+        "endereco": "JDP-CHIP-92994776105",
+        "last_active": "2026-09-04T04:04:52.439Z"
     }
 }
