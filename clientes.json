@@ -51,7 +51,7 @@
   {
     "id": "MAQUINAV8",
     "apiKey": "TUFRVUlOQVY4MTc4",
-    "status": "ativo",
+    "status": "bloqueado",
     "path": "clientes/MAQUINAV8/",
     "modelo": "cliente_MaquinaV8"
   }
