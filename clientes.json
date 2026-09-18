@@ -47,5 +47,12 @@
     "status": "ativo",
     "path": "clientes/160920260000/",
     "modelo": "CLIENTE_160920260000"
+  },
+  {
+    "id": "MAQUINAV8",
+    "apiKey": "TUFRVUlOQVY4MTc4",
+    "status": "ativo",
+    "path": "clientes/MAQUINAV8/",
+    "modelo": "cliente_MaquinaV8"
   }
 ]
