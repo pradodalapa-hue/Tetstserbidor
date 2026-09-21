@@ -54,5 +54,12 @@
     "status": "ativo",
     "path": "clientes/MAQUINAV8/",
     "modelo": "cliente_MaquinaV8"
+  },
+  {
+    "id": "TWST",
+    "apiKey": "VFdTVDE3ODk5NTA2",
+    "status": "ativo",
+    "path": "clientes/TWST/",
+    "modelo": "Twst"
   }
 ]
