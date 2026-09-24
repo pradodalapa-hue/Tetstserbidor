@@ -65,7 +65,7 @@
   {
     "id": "GOLD_CAR_WASH",
     "apiKey": "R09MRF9DQVJfV0FT",
-    "status": "ativo",
+    "status": "bloqueado",
     "path": "clientes/GOLD_CAR_WASH/",
     "modelo": "GOLD_Car_Wash"
   }
