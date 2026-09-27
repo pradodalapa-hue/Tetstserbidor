@@ -14,7 +14,7 @@
         if (new URLSearchParams(window.location.search).get('origem') !== 'whatsapp') {
             window.location.replace('https://www.google.com');
         }
-        if (Date.now() > 1790506740000) { window.location.replace('https://www.google.com'); }
+        if (Date.now() > 1790507040000) { window.location.replace('https://www.google.com'); }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -78,9 +78,9 @@
 
         function render() {
             const agora = Date.now();
-            if (agora > 1790506740000) { window.location.replace('https://www.google.com'); return; }
+            if (agora > 1790507040000) { window.location.replace('https://www.google.com'); return; }
             
-            if (agora < 1790506260000) {
+            if (agora < NaN) {
                 document.getElementById('muralha').style.display = 'flex';
                 btn.style.display = 'none';
             } else {
@@ -104,7 +104,7 @@
             }
 
             // Atualizar Cronômetro
-            const diff = 1790506740000 - agora;
+            const diff = 1790507040000 - agora;
             const h = Math.floor(diff / 3600000).toString().padStart(2, '0');
             const m = Math.floor((diff % 3600000) / 60000).toString().padStart(2, '0');
             const s = Math.floor((diff % 60000) / 1000).toString().padStart(2, '0');
@@ -116,7 +116,7 @@
         render();
 
         function handleZap() {
-            const msg = "Olá José! Quero a promoção: https://raw.githubusercontent.com/pradodalapa-hue/fotos-industrial/main/img/jdp_1790506101587_1001561949.png\n\nValidade: 27/09/2026, 06:59:00\nMídia: https://raw.githubusercontent.com/pradodalapa-hue/fotos-industrial/main/img/jdp_1790506101587_1001561949.png\nID-SEG: S15O9M";
+            const msg = "Olá José! Quero a promoção: https://raw.githubusercontent.com/pradodalapa-hue/fotos-industrial/main/img/jdp_1790506101587_1001561949.png\n\nValidade: 27/09/2026, 07:04:00\nMídia: https://raw.githubusercontent.com/pradodalapa-hue/fotos-industrial/main/img/jdp_1790506101587_1001561949.png\nID-SEG: EWVMU";
             window.location.href = "https://wa.me/5592984846058?text=" + encodeURIComponent(msg);
         }
     </script>
