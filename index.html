@@ -1,1 +1,119 @@
-jjjjjj
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDP - https://pradodalapa-hue.github.io/GOLD_CAR_WASH/</title>
+    <script>
+        if (new URLSearchParams(window.location.search).get('origem') !== 'whatsapp') {
+            window.location.replace('https://www.google.com');
+        }
+        if (Date.now() > 1790506200000) { window.location.replace('https://www.google.com'); }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { margin:0; background:#000; height:100vh; overflow:hidden; display:flex; flex-direction:column; font-family:sans-serif; }
+        #canvas-container { flex:1; display:flex; justify-content:center; align-items:center; position:relative; }
+        canvas { max-width:100%; max-height:100%; object-fit: contain; }
+        
+        .btn-zap { 
+            display: none; position:fixed; bottom:25px; left:50%; transform:translateX(-50%); 
+            background:#25d366; color:white; padding:18px 45px; border-radius:50px; 
+            text-decoration:none; font-weight:bold; font-size:22px; z-index:100; 
+            border:3px solid #fff; box-shadow:0 0 30px rgba(37,211,102,0.6); 
+        }
+
+        #timer-display {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            font-family: 'Orbitron', sans-serif; color: #fde047; font-size: 2.8rem;
+            text-shadow: 0 0 20px #bf953f; z-index: 1000; text-align: center;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: translateX(-50%) scale(1); }
+            to { transform: translateX(-50%) scale(1.05); }
+        }
+
+        #muralha { position:fixed; inset:0; background:#000; z-index:9999; display:none; flex-direction:column; align-items:center; justify-content:center; color:#fde047; text-align:center; }
+    </style>
+</head>
+<body>
+    <div id="timer-display">00:00:00</div>
+    <div id="muralha"><h1 style="font-size:30px">PROMOÇÃO EXPIRADA</h1></div>
+
+    <div id="canvas-container">
+        <canvas id="jdpCanvas"></canvas>
+        <a href="javascript:void(0)" id="mainBtn" onclick="handleZap()" class="btn-zap">✅ RESGATAR AGORA</a>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('jdpCanvas');
+        const ctx = canvas.getContext('2d');
+        const btn = document.getElementById('mainBtn');
+        const timerDiv = document.getElementById('timer-display');
+        
+        let media;
+        const mediaUrl = "https://pradodalapa-hue.github.io/GOLD_CAR_WASH/";
+        const isVideo = mediaUrl.toLowerCase().match(/\.(mp4|webm|ogg|mov)/);
+
+        if (isVideo) {
+            media = document.createElement('video');
+            media.src = mediaUrl;
+            media.muted = true;
+            media.loop = true;
+            media.playsInline = true;
+            media.play();
+        } else {
+            media = new Image();
+            media.crossOrigin = "anonymous";
+            media.src = mediaUrl;
+        }
+
+        function render() {
+            const agora = Date.now();
+            if (agora > 1790506200000) { window.location.replace('https://www.google.com'); return; }
+            
+            if (agora < 1790505600000) {
+                document.getElementById('muralha').style.display = 'flex';
+                btn.style.display = 'none';
+            } else {
+                document.getElementById('muralha').style.display = 'none';
+                btn.style.display = 'flex';
+            }
+
+            // Desenhar Mídia no Canvas
+            if (isVideo) {
+                if (media.readyState >= 2) {
+                    canvas.width = media.videoWidth;
+                    canvas.height = media.videoHeight;
+                    ctx.drawImage(media, 0, 0, canvas.width, canvas.height);
+                }
+            } else {
+                if (media.complete) {
+                    canvas.width = media.width;
+                    canvas.height = media.height;
+                    ctx.drawImage(media, 0, 0, canvas.width, canvas.height);
+                }
+            }
+
+            // Atualizar Cronômetro
+            const diff = 1790506200000 - agora;
+            const h = Math.floor(diff / 3600000).toString().padStart(2, '0');
+            const m = Math.floor((diff % 3600000) / 60000).toString().padStart(2, '0');
+            const s = Math.floor((diff % 60000) / 1000).toString().padStart(2, '0');
+            timerDiv.innerText = h + ":" + m + ":" + s;
+
+            requestAnimationFrame(render);
+        }
+
+        render();
+
+        function handleZap() {
+            const msg = "Olá José! Quero a promoção: https://pradodalapa-hue.github.io/GOLD_CAR_WASH/\n\nValidade: 27/09/2026, 06:50:00\nMídia: https://pradodalapa-hue.github.io/GOLD_CAR_WASH/\nID-SEG: IN3FBJ";
+            window.location.href = "https://wa.me/5592984846058?text=" + encodeURIComponent(msg);
+        }
+    </script>
+</body>
+</html>
