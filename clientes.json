@@ -70,17 +70,17 @@
     "modelo": "GOLDCarWash"
   },
   {
-    "id": "GOLD_CAR_WASH",
-    "apiKey": "R09MRF9DQVJfV0FT",
-    "status": "ativo",
-    "path": "clientes/GOLD_CAR_WASH/",
-    "modelo": "GOLD_Car_Wash"
-  },
-  {
     "id": "GOLD_PIX",
     "apiKey": "R09MRF9QSVgxNzkw",
     "status": "ativo",
     "path": "clientes/GOLD_PIX/",
     "modelo": "GOLD_pix"
+  },
+  {
+    "id": "GOLD_CAR_WASH",
+    "apiKey": "R09MRF9DQVJfV0FT",
+    "status": "ativo",
+    "path": "clientes/GOLD_CAR_WASH/",
+    "modelo": "GOLD_CAR_WASH"
   }
 ]
