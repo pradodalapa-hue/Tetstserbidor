@@ -63,17 +63,17 @@
     "modelo": "Twst"
   },
   {
-    "id": "GOLD_CAR_WASH",
-    "apiKey": "R09MRF9DQVJfV0FT",
-    "status": "ativo",
-    "path": "clientes/GOLD_CAR_WASH/",
-    "modelo": "GOLD_Car_Wash"
-  },
-  {
     "id": "GOLDCARWASH",
     "apiKey": "R09MRENBUldBU0gx",
     "status": "ativo",
     "path": "clientes/GOLDCARWASH/",
     "modelo": "GOLDCarWash"
+  },
+  {
+    "id": "GOLD_CAR_WASH",
+    "apiKey": "R09MRF9DQVJfV0FT",
+    "status": "ativo",
+    "path": "clientes/GOLD_CAR_WASH/",
+    "modelo": "GOLD_Car_Wash"
   }
 ]
