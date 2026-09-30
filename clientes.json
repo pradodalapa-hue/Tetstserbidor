@@ -75,5 +75,12 @@
     "status": "ativo",
     "path": "clientes/GOLD_CAR_WASH/",
     "modelo": "GOLD_Car_Wash"
+  },
+  {
+    "id": "GOLD_PIX",
+    "apiKey": "R09MRF9QSVgxNzkw",
+    "status": "ativo",
+    "path": "clientes/GOLD_PIX/",
+    "modelo": "GOLD_pix"
   }
 ]
