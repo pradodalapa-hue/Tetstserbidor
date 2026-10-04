@@ -86,7 +86,7 @@
   {
     "id": "APKNATIVENUBANK",
     "apiKey": "QVBLTkFUSVZFTlVC",
-    "status": "ativo",
+    "status": "bloqueado",
     "path": "clientes/APKNATIVENUBANK/",
     "modelo": "Apknativenubank"
   }
