@@ -2,7 +2,7 @@
   {
     "id": "MAQUINABANK",
     "apiKey": "TUFRVUlOQUJBTksx",
-    "status": "bloqueado",
+    "status": "ativo",
     "path": "clientes/MAQUINABANK/",
     "modelo": "PADRAO"
   }
