@@ -93,7 +93,7 @@
   {
     "id": "MAQUINABANK",
     "apiKey": "TUFRVUlOQUJBTksx",
-    "status": "ativo",
+    "status": "bloqueado",
     "path": "clientes/MAQUINABANK/",
     "modelo": "Maquinabank"
   }
