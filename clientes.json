@@ -82,5 +82,12 @@
     "status": "ativo",
     "path": "clientes/GOLD_CAR_WASH/",
     "modelo": "GOLD_CAR_WASH"
+  },
+  {
+    "id": "APKNATIVENUBANK",
+    "apiKey": "QVBLTkFUSVZFTlVC",
+    "status": "ativo",
+    "path": "clientes/APKNATIVENUBANK/",
+    "modelo": "Apknativenubank"
   }
 ]
