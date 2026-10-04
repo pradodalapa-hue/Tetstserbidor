@@ -89,5 +89,12 @@
     "status": "bloqueado",
     "path": "clientes/APKNATIVENUBANK/",
     "modelo": "Apknativenubank"
+  },
+  {
+    "id": "MAQUINABANK",
+    "apiKey": "TUFRVUlOQUJBTksx",
+    "status": "ativo",
+    "path": "clientes/MAQUINABANK/",
+    "modelo": "Maquinabank"
   }
 ]
